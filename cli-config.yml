@@ -1,0 +1,24 @@
+version : 0.0.3
+container-name-run : "toolchaintest"
+container-name-tools : "bx-dev-toolchaintest-tools"
+image-name-run : "toolchaintest"
+
+image-name-tools : "bx-dev-java-maven-tools"
+host-path-run : "target"
+build-cmd-run : "mvn install -Dmaven.repo.local=/project/.m2/repository"
+test-cmd : "mvn install -Dmaven.repo.local=/project/.m2/repository"
+build-cmd-debug : "mvn install -Dmaven.repo.local=/project/.m2/repository"
+
+container-path-run : "/project"
+container-path-tools : "/project"
+
+#Liberty server settings
+container-port-map : "9080:9080,9443:9443"
+container-port-map-debug : "7777:7777"
+debug-cmd : "server debug"
+
+
+dockerfile-run : "Dockerfile"
+dockerfile-tools : "Dockerfile-tools"
+ibm-generated-id : "7a96e69c-8d51-46ff-a83c-1af890dfa482"
+credentials-filepath : "src/main/liberty/config/server.env, log.txt"
