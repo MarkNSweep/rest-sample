@@ -6,4 +6,4 @@ applications:
   memory: 512M
   buildpack: liberty-for-java
   host: toolchaintest
-  domain: stage1.mybluemix.net
+  domain: mybluemix.net
